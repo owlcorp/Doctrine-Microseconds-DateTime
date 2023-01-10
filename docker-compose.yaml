@@ -1,0 +1,36 @@
+version: '3'
+services:
+    mysql:
+        image: mysql:5.6.17
+        environment:
+            - MYSQL_DATABASE=microtime
+            - MYSQL_ROOT_PASSWORD=microtime
+        ports:
+            - '13306:3306'
+
+    pgsql:
+        image: postgres:10-alpine
+        environment:
+            POSTGRES_DB: microtime
+            POSTGRES_PASSWORD: microtime
+            POSTGRES_USER: microtime
+        ports:
+            - "15432:5432"
+
+    oracle:
+        image: gvenzl/oracle-xe:slim
+        environment:
+            ORACLE_ALLOW_REMOTE: true
+            ORACLE_DATABASE: microtime
+            ORACLE_PASSWORD: microtime
+        ports:
+            - "11521:1521"
+
+    mssql:
+        image: mcr.microsoft.com/azure-sql-edge
+        environment:
+            ACCEPT_EULA: Y
+            MSSQL_SA_PASSWORD: M!cr0tim3
+        ports:
+            - "11433:1433"
+

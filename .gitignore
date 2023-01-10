@@ -1,0 +1,18 @@
+/.env.*.local
+/vendor/
+composer.lock
+var/
+
+###> phpunit/phpunit ###
+/phpunit.xml
+.phpunit.result.cache
+###< phpunit/phpunit ###
+
+###> squizlabs/php_codesniffer ###
+/.phpcs-cache
+/phpcs.xml
+###< squizlabs/php_codesniffer ###
+
+.idea/
+test.php
+*.sqlite
